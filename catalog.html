@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог курсов - LanguaSpeak</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://kit.fontawesome.com/2b17b3dc6c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header-container">
+        <div class="logo">LanguaSpeak</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html" class="active">Курсы</a></li>
+            <li><a href="profile.html">Личный кабинет</a></li>
+            <li><a href="login.html">Войти</a></li>
+            <li><a href="admin.html">Админ-панель</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="container mt-2">
+        <h1>Все курсы</h1>
+
+        <!-- Фильтры и поиск (пример) -->
+        <div style="display:flex; gap:1rem; margin-bottom:1rem; flex-wrap:wrap;">
+          <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search" placeholder="Введите название курса..." class="search">
+          </div>
+
+          <div>
+            <label for="level">Уровень:</label>
+            <div class="select-wrapper">
+              <select id="level">
+                <option value="">Все</option>
+                <option value="beginner">Начальный</option>
+                <option value="intermediate">Средний</option>
+                <option value="advanced">Продвинутый</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="sort">Сортировка:</label>
+            <div class="select-wrapper">
+              <select id="sort">
+                <option value="popularity">По популярности</option>
+                <option value="price_low">По возрастанию цены</option>
+                <option value="price_high">По убыванию цены</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Список курсов -->
+        <div class="course-cards">
+          <!-- Карточка курса -->
+          <div class="course-card">
+            <img src="./assets/img/catalog/eng.jpg" alt="English Course">
+            <div class="card-content">
+              <h3>Английский для начинающих</h3>
+              <p>Изучите базовый уровень английского языка с нуля.</p>
+              <div class="price">Цена: 4500 руб</div>
+              <a href="course.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <img src="./assets/img/catalog/german.jpeg" alt="German Course">
+            <div class="card-content">
+              <h3>Немецкий A1-A2</h3>
+              <p>Основные навыки общения на немецком языке.</p>
+              <div class="price">Цена: 5000 руб</div>
+              <a href="course.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <img src="./assets/img/catalog/french.jpeg" alt="French Course">
+            <div class="card-content">
+              <h3>Французский для туристов</h3>
+              <p>Мини-курс для быстрого освоения разговорной речи.</p>
+              <div class="price">Цена: 3500 руб</div>
+              <a href="course.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="logo">LanguaSpeak</div>
+        <p>© 2025 LanguaSpeak. Все права защищены.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

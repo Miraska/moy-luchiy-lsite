@@ -1,0 +1,475 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+
+.fa-solid {
+  font-size: 36px;
+  color: #007BFF;
+}
+
+.fa-magnifying-glass {
+  color: black;
+  font-size: 24px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+:focus {
+  outline: none;
+}
+
+/* Ссылки */
+a {
+  color: #007BFF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #344194;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+/* Заголовки секций */
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  left: 0;
+  background-color: #007BFF;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav li a {
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+nav li a:hover {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+nav li a.active {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+/* 4. ФУТЕР */
+footer {
+  background-color: #222;
+  color: #eee;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  flex-shrink: 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-container .logo {
+  color: #eee;
+}
+
+.footer-container .socials a {
+  margin-right: 0.5rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-container .socials a:hover {
+  color: #bbb;
+}
+
+/* 5. HERO */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../img/common/foreign-language.jpg.webp') center/cover no-repeat;
+
+  background-blend-mode: darken;
+
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  margin-bottom: 2rem;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  background-color: #007BFF;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-weight: 500;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #003771;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+/* 6. КАРТОЧКИ КУРСОВ */
+
+.section-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-side {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  grid: 40px;
+}
+
+.course-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.course-card {
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.course-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.course-card .card-content {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card .card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.course-card .card-content p {
+  flex: 1;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.course-card .card-content .price {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.course-card .card-content a.btn {
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* 7. ФОРМЫ: .form-container, .form-group */
+.form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #676767;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+
+/* Селекты */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  width: 100%;
+  padding: 0.7rem;
+  padding-right: 2.5rem;
+  border: 1px solid #676767;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23676767' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5H7z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 16px;
+}
+
+select:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+/* Search */
+.search {
+  width: 200px;
+  padding: 0.7rem;
+  color: black;
+}
+
+
+/* 8. ТАБЛИЦЫ */
+.table-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  min-width: 600px;
+}
+
+table thead {
+  background-color: #f0f0f0;
+}
+
+table th,
+table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+table th {
+  font-weight: 600;
+}
+
+table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+/* 9. ЛИЧНЫЙ КАБИНЕТ */
+.profile-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.profile-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-sidebar h3 {
+  margin-bottom: 1rem;
+}
+
+.profile-sidebar p {
+  margin-bottom: 0.5rem;
+}
+
+.profile-content {
+  flex: 1;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* 10. ПРОЧЕЕ */
+.advantages {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.advantage-item {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.advantage-item h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.advantage-item p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Скрытые/дополнительные блоки */
+.hidden {
+  display: none !important;
+}
